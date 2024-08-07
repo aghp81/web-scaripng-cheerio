@@ -7,6 +7,8 @@ const fs = require("fs")
 // ماژول path برای کار با مسیرها
 const path = require("path")
 
+// مشخص کردن مسیر فایل
+const file_path = path.join(__dirname, "index1.html"); // __dirname == مسیر پروژه
 
 
 // مشخص کردن محتوای html

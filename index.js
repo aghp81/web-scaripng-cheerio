@@ -7,3 +7,5 @@ const $ = cheerio.load(`
         Hello, World!
     </title></head></html>
 `)
+
+console.log($('title').text())

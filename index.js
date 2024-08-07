@@ -9,3 +9,4 @@ const $ = cheerio.load(`
 `)
 
 console.log($('title').text())
+console.log($('head').text())

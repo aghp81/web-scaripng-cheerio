@@ -8,5 +8,5 @@ const $ = cheerio.load(`
     </title></head></html>
 `)
 
-console.log($('title').text())
-console.log($('head').text())
+console.log($('title').text()); // node index.js == Hello, World!
+console.log($('head').text()); // node index.js == Hello, World!

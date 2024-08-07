@@ -1,6 +1,14 @@
 // دسترسی به کتابخانه Cheerio
 const cheerio  = require("cheerio");
 
+// خواندن محتوای یک فایل
+const fs = require("fs")
+
+// ماژول path برای کار با مسیرها
+const path = require("path")
+
+
+
 // مشخص کردن محتوای html
 const $ = cheerio.load(`
     <html><head><title>

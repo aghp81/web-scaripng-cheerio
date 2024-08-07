@@ -10,6 +10,8 @@ const path = require("path")
 // مشخص کردن مسیر فایل
 const file_path = path.join(__dirname, "index1.html"); // __dirname == مسیر پروژه
 
+//خواندن محتوای فایل
+const html_content = fs.readFileSync(file_path, "utf-8"); // file_path == مسیر فایل
 
 // مشخص کردن محتوای html
 const $ = cheerio.load(`

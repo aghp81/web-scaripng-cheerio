@@ -10,3 +10,4 @@ const $ = cheerio.load(`
 
 console.log($('title').text()); // node index.js == Hello, World!
 console.log($('head').text()); // node index.js == Hello, World!
+console.log($('head').html()); // node index.js == <html code>

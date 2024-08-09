@@ -150,4 +150,9 @@ data10.each((index, element)=> {
     console.log(index, $3(element).html());
 })
 
+// show closest article to p tag == an array
+const data11 = $3("p").closest("article");
+data11.each((index, element)=> {
+    console.log(index, $3(element).html());
+})
 

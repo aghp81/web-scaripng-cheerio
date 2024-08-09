@@ -107,7 +107,7 @@ data3.each((index, element)=> {
 })
 
 // show  p tags in the div that contains 2 == an array
-const data4 = $3("div p:contains(' 2')");
+const data4 = $3("div p:contains('Node')");
 data4.each((index, element)=> {
     console.log(index, $3(element).text());
 })

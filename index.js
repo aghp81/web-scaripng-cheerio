@@ -132,8 +132,15 @@ data7.each((index, element)=> {
 })
 
 // پیمایش به سمت بالا
-// show all of the html content article parent == an array
+// show first of the html content article parent == an array
 const data8 = $3("article").parent();
 data8.each((index, element)=> {
     console.log(index, $3(element).html());
 })
+
+// show all of the html content article parents == an array
+const data9 = $3("article").parents();
+data9.each((index, element)=> {
+    console.log(index, $3(element).html());
+})
+

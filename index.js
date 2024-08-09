@@ -93,3 +93,9 @@ const data1 = $3("div > p");
 data1.each((index, element)=> {
     console.log(index, $3(element).text());
 })
+
+// show first of p tag in the div == an array
+const data2 = $3("div p:first");
+data2.each((index, element)=> {
+    console.log(index, $3(element).text());
+})

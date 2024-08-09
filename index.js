@@ -230,4 +230,11 @@ data24.each((index, element) => {
   console.log(index, $3(element).text()); 
 });
 
+// show all of p tag in the article with andis 1 in the array and in the same level == an array
+const data25 = $3("article p:eq(1)").siblings();
+data25.each((index, element) => {
+  console.log(index, $3(element).text()); 
+});
+
+
 

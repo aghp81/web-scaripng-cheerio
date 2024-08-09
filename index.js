@@ -78,3 +78,4 @@ const html_content1 = fs1.readFileSync(file_path1, "utf-8"); // file_path == م�
 // مشخص کردن محتوای فایل
 const $3 = cheerio.load(html_content1);
 console.log($3(".content").text()); // نمایش تکست کلاس content
+console.log($3("[id=sub-text]").text()); // نمایش تکست id sub-text

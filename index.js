@@ -220,7 +220,13 @@ data22.each((index, element) => {
 
 // show all of  p tag in the article == an array
 const data23 = $3("article p");
-data22.each((index, element) => {
+data23.each((index, element) => {
+  console.log(index, $3(element).text()); 
+});
+
+// show all of  p tag in the article with andis 1 in the array == an array
+const data24 = $3("article p:eq(1)");
+data24.each((index, element) => {
   console.log(index, $3(element).text()); 
 });
 

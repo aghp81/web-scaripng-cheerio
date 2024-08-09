@@ -111,3 +111,10 @@ const data4 = $3("div p:contains('Node')");
 data4.each((index, element)=> {
     console.log(index, $3(element).text());
 })
+
+// پیمایش به سمت پایین
+// show all of the p tags in the div
+const data5 = $3("div").find('p');
+data5.each((index, element)=> {
+    console.log(index, $3(element).text());
+})

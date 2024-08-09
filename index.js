@@ -205,16 +205,23 @@ data20.each((index, element) => {
   console.log(index, $3(element).text()); 
 });
 
+
+// show all of Previous p tag bofore the last p == an array
+const data21 = $3("p:last").prevAll();
+data21.each((index, element) => {
+  console.log(index, $3(element).text()); // nothing
+});
+
 // show all of Previous p tag in the article bofore the last p == an array
 const data22 = $3("article p:last").prevAll();
 data22.each((index, element) => {
   console.log(index, $3(element).text()); 
 });
 
-// show all of Previous p tag bofore the last p == an array
-const data21 = $3("p:last").prevAll();
-data21.each((index, element) => {
-  console.log(index, $3(element).text()); // nothing
+// show all of  p tag in the article == an array
+const data23 = $3("article p");
+data22.each((index, element) => {
+  console.log(index, $3(element).text()); 
 });
 
 

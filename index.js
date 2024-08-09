@@ -124,3 +124,9 @@ const data6 = $3("div").children("p");
 data6.each((index, element)=> {
     console.log(index, $3(element).text());
 })
+
+// show all of the the div children == an array
+const data7 = $3("div").contents();
+data7.each((index, element)=> {
+    console.log(index, $3(element).text());
+})

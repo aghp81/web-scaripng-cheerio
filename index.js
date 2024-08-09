@@ -105,3 +105,9 @@ const data3 = $3("div p:last");
 data3.each((index, element)=> {
     console.log(index, $3(element).text());
 })
+
+// show  p tags in the div that contains 2 == an array
+const data4 = $3("div p:contains(' 2')");
+data4.each((index, element)=> {
+    console.log(index, $3(element).text());
+})

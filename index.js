@@ -193,4 +193,10 @@ data18.each((index, element) => {
   console.log(index, $3(element).text()); // javascript
 });
 
+// show 2 Previous p tag index 1 of array == an array
+const data19 = $3("p:eq(1)").prev().prev();
+data19.each((index, element) => {
+  console.log(index, $3(element).text()); // javascript
+});
+
 

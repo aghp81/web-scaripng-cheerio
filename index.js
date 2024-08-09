@@ -174,4 +174,10 @@ data15.each((index, element) => {
   console.log(index, $3(element).text());
 });
 
+// show all of p tag == an array
+const data16 = $3("p");
+data16.each((index, element) => {
+  console.log(index, $3(element).text());
+});
+
 

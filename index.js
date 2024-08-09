@@ -79,3 +79,4 @@ const html_content1 = fs1.readFileSync(file_path1, "utf-8"); // file_path == م�
 const $3 = cheerio.load(html_content1);
 console.log($3(".content").text()); // نمایش تکست کلاس content
 console.log($3("[id=sub-text]").text()); // نمایش تکست id sub-text
+console.log($3("p.selected").text()); // show text for p tag with selected class

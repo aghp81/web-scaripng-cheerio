@@ -242,5 +242,12 @@ data26.each((index, element) => {
   console.log(index, $3(element).text()); 
 });
 
+// show all of p tag in the article from last to first == an array
+const data27 = $3("article p:last").prevUntil("article p:first");
+data27.each((index, element) => {
+  console.log(index, $3(element).text()); 
+});
+
+
 
 

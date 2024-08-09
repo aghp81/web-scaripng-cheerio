@@ -144,3 +144,10 @@ data9.each((index, element)=> {
     console.log(index, $3(element).html());
 })
 
+// show all of the html content article parents Until body == an array
+const data10 = $3("article").parentsUntil("body");
+data10.each((index, element)=> {
+    console.log(index, $3(element).html());
+})
+
+

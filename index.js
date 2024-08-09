@@ -196,7 +196,13 @@ data18.each((index, element) => {
 // show 2 Previous p tag index 1 of array == an array
 const data19 = $3("p:eq(1)").prev().prev();
 data19.each((index, element) => {
-  console.log(index, $3(element).text()); // javascript
+  console.log(index, $3(element).text()); // nothing
+});
+
+// show all of next p tag after the first p == an array
+const data20 = $3("p:first").nextAll().prev();
+data20.each((index, element) => {
+  console.log(index, $3(element).text()); // nothing
 });
 
 

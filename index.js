@@ -2,15 +2,29 @@
 const cheerio  = require("cheerio");
 
 // خواندن اطلاعات از آدرس اینترنتی با استفاده از پکیج اکسیوس
+const axios = require("axios");
 
+// دریافت اطلاعات از آدرس اینترنتی
+const fetchAndParseURL = async (url) => {
+    try {
+        // دریافت اطلاعات
+        const response = await axios.get(url);
+        const $2 = cheerio.load(response.data); // دریافت محتوای اچ تی ام ال سایت
+        console.log("Title: ", $2("title").text());// نمایش تایتل سایت
+    } catch (error) {
+        console.log("Error fetching the URL: ",  error);
+    }
+};
 
+const url = "https://stackoverflow.com/";
+fetchAndParseURL(url);// فراخوانی آردس سایت
 
 
 // خواندن محتوای یک فایل
-const fs = require("fs")
+const fs = require("fs");
 
 // ماژول path برای کار با مسیرها
-const path = require("path")
+const path = require("path");
 
 // مشخص کردن مسیر فایل
 const file_path = path.join(__dirname, "index1.html"); // __dirname == مسیر پروژه

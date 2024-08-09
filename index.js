@@ -202,7 +202,13 @@ data19.each((index, element) => {
 // show all of next p tag after the first p == an array
 const data20 = $3("p:first").nextAll();
 data20.each((index, element) => {
-  console.log(index, $3(element).text()); // nothing
+  console.log(index, $3(element).text()); 
+});
+
+// show all of Previous p tag in the article bofore the last p == an array
+const data22 = $3("article p:last").prevAll();
+data22.each((index, element) => {
+  console.log(index, $3(element).text()); 
 });
 
 // show all of Previous p tag bofore the last p == an array

@@ -168,3 +168,10 @@ data14.each((index, element) => {
   console.log(index, $3(element).text());
 });
 
+// show 2 next of p tag after the first p == an array
+const data15 = $3("p:first").next().next();
+data15.each((index, element) => {
+  console.log(index, $3(element).text());
+});
+
+

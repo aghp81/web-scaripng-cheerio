@@ -87,3 +87,9 @@ const data = $3("div p");
 data.each((index, element)=> {
     console.log(index, $3(element).text());
 })
+
+// show all of p tags directly in the div == an array == text 4
+const data1 = $3("div > p");
+data.each((index, element)=> {
+    console.log(index, $3(element).text());
+})

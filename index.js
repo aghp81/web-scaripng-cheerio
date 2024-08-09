@@ -99,3 +99,9 @@ const data2 = $3("div p:first");
 data2.each((index, element)=> {
     console.log(index, $3(element).text());
 })
+
+// show last of p tag in the div == an array
+const data3 = $3("div p:last");
+data3.each((index, element)=> {
+    console.log(index, $3(element).text());
+})

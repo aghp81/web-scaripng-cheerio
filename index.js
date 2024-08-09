@@ -118,3 +118,9 @@ const data5 = $3("div").find('p');
 data5.each((index, element)=> {
     console.log(index, $3(element).text());
 })
+
+// show all of the p tags that directly in the div == Material UI
+const data6 = $3("div").children("p");
+data6.each((index, element)=> {
+    console.log(index, $3(element).text());
+})

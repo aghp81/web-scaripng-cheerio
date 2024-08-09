@@ -81,3 +81,9 @@ console.log($3(".content").text()); // نمایش تکست کلاس content
 console.log($3("[id=sub-text]").text()); // نمایش تکست id sub-text
 console.log($3("p.selected").text()); // show text for p tag with selected class
 console.log($3("div p").text()); // show all of p tags in the div == Text 1Text 2Text 3
+
+// show all of p tags in the div == an array
+const data = $3("div p");
+data.each((index, element)=> {
+    console.log(index, $3(element).text());
+})

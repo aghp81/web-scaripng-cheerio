@@ -161,3 +161,10 @@ data13.each((index, element) => {
   console.log(index, $3(element).html());
 });
 
+// پیمایش به سمت کنار
+// show next of p tag after the first p == an array
+const data14 = $3("p:first").next();
+data14.each((index, element) => {
+  console.log(index, $3(element).text());
+});
+

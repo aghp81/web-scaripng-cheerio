@@ -9,7 +9,7 @@ const fetchCategorise = async () => {
 
     const $ = cheerio.load(response.data);
 
-    console.log($.html());
+    console.log($.html()); // show all of faradars html home page
 
     return $;
   } catch (error) {

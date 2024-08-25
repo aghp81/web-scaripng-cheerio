@@ -180,7 +180,6 @@ data16.each((index, element) => {
   console.log(index, $3(element).text());
 });
 
-
 // show p tag index 1 of array == an array
 const data17 = $3("p:eq(1)");
 data17.each((index, element) => {
@@ -202,9 +201,8 @@ data19.each((index, element) => {
 // show all of next p tag after the first p == an array
 const data20 = $3("p:first").nextAll();
 data20.each((index, element) => {
-  console.log(index, $3(element).text()); 
+  console.log(index, $3(element).text());
 });
-
 
 // show all of Previous p tag bofore the last p == an array
 const data21 = $3("p:last").prevAll();
@@ -215,37 +213,37 @@ data21.each((index, element) => {
 // show all of Previous p tag in the article bofore the last p == an array
 const data22 = $3("article p:last").prevAll();
 data22.each((index, element) => {
-  console.log(index, $3(element).text()); 
+  console.log(index, $3(element).text());
 });
 
 // show all of  p tag in the article == an array
 const data23 = $3("article p");
 data23.each((index, element) => {
-  console.log(index, $3(element).text()); 
+  console.log(index, $3(element).text());
 });
 
 // show all of  p tag in the article with andis 1 in the array == an array
 const data24 = $3("article p:eq(1)");
 data24.each((index, element) => {
-  console.log(index, $3(element).text()); 
+  console.log(index, $3(element).text());
 });
 
 // show all of p tag in the article with andis 1 in the array and in the same level == an array
 const data25 = $3("article p:eq(1)").siblings();
 data25.each((index, element) => {
-  console.log(index, $3(element).text()); 
+  console.log(index, $3(element).text());
 });
 
 // show all of p tag in the article from first to last == an array
 const data26 = $3("article p:first").nextUntil("article p:last");
 data26.each((index, element) => {
-  console.log(index, $3(element).text()); 
+  console.log(index, $3(element).text());
 });
 
 // show all of p tag in the article from last to first == an array
 const data27 = $3("article p:last").prevUntil("article p:first");
 data27.each((index, element) => {
-  console.log(index, $3(element).text()); 
+  console.log(index, $3(element).text());
 });
 
 // فیلتر کردن عناصر
@@ -253,40 +251,38 @@ data27.each((index, element) => {
 // use first method for show first p tag in the article == an array
 const data28 = $3("article p").first();
 data28.each((index, element) => {
-  console.log(index, $3(element).text()); 
+  console.log(index, $3(element).text());
 });
 
 // use last method for show last p tag in the article == an array
 const data29 = $3("article p").first();
 data29.each((index, element) => {
-  console.log(index, $3(element).text()); 
+  console.log(index, $3(element).text());
 });
 
 // use eq() method for show andis of tag in the article == an array
 const data30 = $3("article p").eq(2);
 data30.each((index, element) => {
-  console.log(index, $3(element).text()); 
+  console.log(index, $3(element).text());
 });
 
 // use filter method for filter class of tag in the article == an array
 const data31 = $3("article p").filter(".selected"); // Node.js
 data31.each((index, element) => {
-  console.log(index, $3(element).text()); 
+  console.log(index, $3(element).text());
 });
 
 // use not method for revers filter class of tag in the article == an array
-const data32 = $3("article p").not(".selected"); 
+const data32 = $3("article p").not(".selected");
 data32.each((index, element) => {
-  console.log(index, $3(element).text()); 
+  console.log(index, $3(element).text());
 });
-
 
 // use has method for filter div that has article tag in it == an array
-const data33 = $3("div").has(".article"); 
+const data33 = $3("div").has(".article");
 data33.each((index, element) => {
-  console.log(index, $3(element).text()); 
+  console.log(index, $3(element).text());
 });
-
 
 // دستکاری عناصر DOM
 //تغییر محتوا
@@ -305,9 +301,10 @@ const data35 = $3("div");
 data35.filter(".content").html("<h2>New Text</h2>");
 console.log(data35.parents().html());
 
-
-
-
-
-
+//تغییر ویژگی ها
+//َAttribute
+//Property
+//show href attribute value
+const href = $3("a").attr("href");
+console.log("HREF: ", href);
 

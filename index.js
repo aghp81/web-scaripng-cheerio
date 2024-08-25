@@ -248,6 +248,52 @@ data27.each((index, element) => {
   console.log(index, $3(element).text()); 
 });
 
+// فیلتر کردن عناصر
+
+// use first method for show first p tag in the article == an array
+const data28 = $3("article p").first();
+data28.each((index, element) => {
+  console.log(index, $3(element).text()); 
+});
+
+// use last method for show last p tag in the article == an array
+const data29 = $3("article p").first();
+data29.each((index, element) => {
+  console.log(index, $3(element).text()); 
+});
+
+// use eq() method for show andis of tag in the article == an array
+const data30 = $3("article p").eq(2);
+data30.each((index, element) => {
+  console.log(index, $3(element).text()); 
+});
+
+// use filter method for filter class of tag in the article == an array
+const data31 = $3("article p").filter(".selected"); // Node.js
+data31.each((index, element) => {
+  console.log(index, $3(element).text()); 
+});
+
+// use not method for revers filter class of tag in the article == an array
+const data32 = $3("article p").not(".selected"); 
+data32.each((index, element) => {
+  console.log(index, $3(element).text()); 
+});
+
+
+// use has method for filter div that has article tag in it == an array
+const data33 = $3("div").has(".article"); 
+data33.each((index, element) => {
+  console.log(index, $3(element).text()); 
+});
+
+
+
+
+
+
+
+
 
 
 

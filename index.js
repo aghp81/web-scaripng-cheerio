@@ -323,4 +323,9 @@ const input = $3("input[type='text']");
 input.prop("value", "Welcome");
 console.log("Input Value: ", input.prop("value"));
 
+//change Input Value with attr method
+const input1 = $3("input[type='text']");
+input.attr("value", "Welcome");
+console.log("Input Value: ", input1.attr("value"));
+
 

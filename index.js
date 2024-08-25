@@ -314,3 +314,8 @@ const href1 = $3("a").prop("href");
 console.log("HREF: ", href1);
 
 
+//show Input Value 
+const href2 = $3("input[type='text']").prop("value");
+console.log("Input Value: ", href2);
+
+

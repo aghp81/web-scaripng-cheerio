@@ -381,3 +381,10 @@ console.log("> UnWrap  ------------------");
 // unwrap article from div 
 data36.unwrap()
 console.log(data36.parents().parent().html()); // show parent in the parents
+
+
+console.log("> Empty  ------------------");
+// خالی کردن عناصر 
+// empty methgod = empty everything from article
+data36.empty()
+console.log(data36.parents().parent().html()); // show parent in the parents

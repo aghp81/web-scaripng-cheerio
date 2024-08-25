@@ -361,3 +361,9 @@ console.log("> remove ------------------");
 // remove all of the span tags remove method
 $3("article span").remove();
 console.log(data36.parents().html());
+
+console.log("> Wrap ------------------");
+
+// wrap article in the div with content calss
+data36.wrap('<div class="content"></div>')
+console.log(data36.parents().parent().html()); // show parent in the parents

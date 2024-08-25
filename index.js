@@ -62,7 +62,6 @@ const fs1 = require("fs");
 
 // ماژول path برای کار با مسیرها
 const path1 = require("path");
-const { filter } = require("cheerio/lib/api/traversing");
 // مشخص کردن مسیر فایل
 const file_path1 = path1.join(__dirname, "index2.html"); // __dirname == مسیر پروژه
 
@@ -304,7 +303,6 @@ const data35 = $3("div");
 
 // change html of element that has content class
 data35.filter(".content").html("<h2>New Text</h2>");
-
 console.log(data35.parents().html());
 
 

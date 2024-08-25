@@ -364,6 +364,13 @@ console.log(data36.parents().html());
 
 console.log("> Wrap ------------------");
 
-// wrap article in the div with content calss
+//محصور کردن
+// wrap article in the div with content calss 
 data36.wrap('<div class="content"></div>')
+console.log(data36.parents().parent().html()); // show parent in the parents
+
+console.log("> Wrap Inner ------------------");
+// محصور کردن در داخل
+// wrap article in the div with content calss 
+data36.wrapInner('<div class="content"></div>')
 console.log(data36.parents().parent().html()); // show parent in the parents

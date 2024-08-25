@@ -339,8 +339,8 @@ data.append('<p> --- last --- </p>'); // add to end of article
 const p_list = $3("article p");
 
 // add p tag after and befor index 2 in the article p
-p_list.aq(2).before("<p>--- Before index 2 ---</p>")
-p_list.aq(2).after("<p>--- After index 2 ---</p>")
+p_list.eq(2).before("<p>--- Before index 2 ---</p>")
+p_list.eq(2).after("<p>--- After index 2 ---</p>")
 
 console.log(data36.parents().html());
 

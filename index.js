@@ -291,13 +291,18 @@ data33.each((index, element) => {
 // دستکاری عناصر DOM
 //تغییر محتوا
 // show p tags in the article
-const data34 = $("article p");
+const data34 = $3("article p");
 
 // change the first p tag content
 data34.first().text("java-script");
 
 console.log(data34.parents().html());
 
+// show div tags in the article
+const data35 = $3("div");
+
+
+console.log(data35.parents().html());
 
 
 

@@ -308,3 +308,9 @@ console.log(data35.parents().html());
 const href = $3("a").attr("href");
 console.log("HREF: ", href);
 
+
+//show href attribute value
+const href1 = $3("a").prop("href");
+console.log("HREF: ", href1);
+
+

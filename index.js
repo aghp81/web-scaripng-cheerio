@@ -354,3 +354,8 @@ console.log("------------------");
 // repalce p tags in the article with span tag replaceWith method
 $3("article p").replaceWith("<span>1234/span>");
 console.log(data36.parents().html());
+
+
+// remove all of the span tags remove method
+$3("article span").remove();
+console.log(data36.parents().html());

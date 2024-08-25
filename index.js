@@ -331,6 +331,7 @@ console.log("Input Value: ", input1.attr("value"));
 
 //  افزودن و حذف عناصر 
 const data36 = $3("article");
-// add a p tag to article
-data.prepend('<p> --- before --- </p>')
+// add a p tag to article 
+data.prepend('<p> --- before --- </p>'); // add to firts of article
+data.append('<p> --- before --- </p>'); // add to end of article
 console.log(data36.parents().html());

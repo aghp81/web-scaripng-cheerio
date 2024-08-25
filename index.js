@@ -348,3 +348,9 @@ $3("<h2>--- After article ---</h2>").insertAfter(data36); // data36 == article
 
 console.log(data36.parents().html());
 
+console.log("------------------");
+
+
+// repalce p tags in the article with span tag replaceWith method
+$3("article p").replaceWith("<span>1234/span>");
+console.log(data36.parents().html());

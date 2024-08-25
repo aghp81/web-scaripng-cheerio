@@ -5,7 +5,9 @@ const fetchCategorise = async () => {
   try {
     const url = "https://faradars.org";
 
-    const response = await axios.get(url);
+    const response = await axios.get(url,{
+        timeout: 10000, // 10000ms wait for response the data from site
+    });
 
     const $ = cheerio.load(response.data);
 

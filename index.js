@@ -333,5 +333,5 @@ console.log("Input Value: ", input1.attr("value"));
 const data36 = $3("article");
 // add a p tag to article 
 data.prepend('<p> --- before --- </p>'); // add to firts of article
-data.append('<p> --- before --- </p>'); // add to end of article
+data.append('<p> --- last --- </p>'); // add to end of article
 console.log(data36.parents().html());

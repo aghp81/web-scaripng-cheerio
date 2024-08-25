@@ -342,5 +342,9 @@ const p_list = $3("article p");
 p_list.eq(2).before("<p>--- Before index 2 ---</p>")
 p_list.eq(2).after("<p>--- After index 2 ---</p>")
 
+//insertBefore method for inser before data36 const mean article
+$3("<h2>--- Before article ---</h2>").insertBefore(data36); // data36 == article
+$3("<h2>--- Before article ---</h2>").insertAfter(data36); // data36 == article
+
 console.log(data36.parents().html());
 

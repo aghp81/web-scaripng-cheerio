@@ -8,6 +8,9 @@ const fetchCategorise = async () => {
     const response = await axios.get(url);
 
     const $ = cheerio.load(response.data);
+
+    console.log($.html());
+
     return $;
   } catch (error) {
     console.log("Error Fetching Categorise: ", error);

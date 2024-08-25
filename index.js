@@ -334,4 +334,13 @@ const data36 = $3("article");
 // add a p tag to article 
 data.prepend('<p> --- first --- </p>'); // add to firts of article
 data.append('<p> --- last --- </p>'); // add to end of article
+
+// select list of p tags in the article
+const p_list = $3("article p");
+
+// add p tag after and befor index 2 in the article p
+p_list.aq(2).before("<p>--- Before index 2 ---</p>")
+p_list.aq(2).after("<p>--- After index 2 ---</p>")
+
 console.log(data36.parents().html());
+

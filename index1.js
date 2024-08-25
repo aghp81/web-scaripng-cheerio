@@ -16,7 +16,7 @@ const fetchCategorise = async () => {
 
     const $ = cheerio.load(response.data);
 
-    console.log($.html()); // show all of faradars html home page
+    // console.log($.html()); // show all of faradars html home page
 
     return $;
   } catch (error) {
@@ -24,4 +24,9 @@ const fetchCategorise = async () => {
   }
 };
 
-fetchCategorise();
+// fetchCategorise();
+
+// پارس یا پردازش کردن اطلاعات
+const parseCategoriseContent = async () => {
+    const $ = await fetchCategorise();
+}

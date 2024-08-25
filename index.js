@@ -329,3 +329,8 @@ input.attr("value", "Welcome");
 console.log("Input Value: ", input1.attr("value"));
 
 
+//  افزودن و حذف عناصر 
+const data36 = $3("article");
+// add a p tag to article
+data.prepend('<p> --- before --- </p>')
+console.log(data36.parents().html());

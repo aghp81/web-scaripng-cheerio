@@ -296,7 +296,7 @@ const data34 = $("article p");
 // change the first p tag content
 data34.first().text("java-script");
 
-console.log(data34.parent().html());
+console.log(data34.parents().html());
 
 
 

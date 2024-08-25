@@ -371,6 +371,13 @@ console.log(data36.parents().parent().html()); // show parent in the parents
 
 console.log("> Wrap Inner ------------------");
 // محصور کردن در داخل
-// wrap article in the div with content calss 
-data36.wrapInner('<div class="content"></div>')
+// wrap article in the div 
+data36.wrapInner('<div></div>')
+console.log(data36.parents().parent().html()); // show parent in the parents
+
+
+console.log("> UnWrap  ------------------");
+// خارج کردن از حصر
+// unwrap article from div 
+data36.unwrap()
 console.log(data36.parents().parent().html()); // show parent in the parents

@@ -13,3 +13,5 @@ const fetchCategorise = async () => {
     console.log("Error Fetching Categorise: ", error);
   }
 };
+
+fetchCategorise();

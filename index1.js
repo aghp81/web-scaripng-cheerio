@@ -28,5 +28,15 @@ const fetchCategorise = async () => {
 
 // پارس یا پردازش کردن اطلاعات
 const parseCategoriseContent = async () => {
-    const $ = await fetchCategorise();
-}
+  const $ = await fetchCategorise();
+
+  const links = $("main > div h2"); // list h2 in div in main tag
+
+  links.each((index, element) => {
+    console.log(index, $(element).html());
+    console.log("-------------------");
+  });
+};
+
+
+parseCategoriseContent();

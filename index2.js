@@ -71,4 +71,4 @@ const fetchCrsWithScroll = async () => {
      const page = await browser.newPage();
 }
 
-parseCarsContent();
+fetchCrsWithScroll();

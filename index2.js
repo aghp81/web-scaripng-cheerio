@@ -74,6 +74,10 @@ const fetchCrsWithScroll = async () => {
      console.log("Network Connected...");
 
      const url = "https://bama.ir/car"; // url of site
+
+     await page.goto(url); // go to url
+     console.log("Page Loaded...");
+
 }
 
 fetchCrsWithScroll();

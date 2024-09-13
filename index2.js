@@ -2,7 +2,6 @@ const cheerio = require("cheerio");
 const axios = require("axios");
 const ppt = require("puppeteer-core"); // puppeteer-core fore scroll the web page and web scrap all of the page
 
-
 const fetchCars = async () => {
   try {
     const url = "https://bama.ir/car";
@@ -51,33 +50,37 @@ const parseCarsContent = async () => {
     cars.push({
       id: index + 1,
       title,
-      year
+      year,
     });
   });
-    console.log(cars);
+  console.log(cars);
 };
-
 
 // fetch data from the site with scroll
 const fetchCrsWithScroll = async () => {
-    // open google chrom browser and launch
-     const browser = await ppt.launch({
-        headless: false,
-        ignoreHTTPSErrors: true, // ignore https errors
-        waitForInitialPage: true, // wait for load page
-        executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" // addres of chrom exe file in my pc
-     })
+  // open google chrom browser and launch
+  const browser = await ppt.launch({
+    headless: false,
+    ignoreHTTPSErrors: true, // ignore https errors
+    waitForInitialPage: true, // wait for load page
+    executablePath:
+      "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe", // addres of chrom exe file in my pc
+  });
 
-     const page = await browser.newPage();
+  const page = await browser.newPage();
 
-     await page.waitForNetworkIdle(); // wait for check and connect to newwork
-     console.log("Network Connected...");
+  await page.waitForNetworkIdle(); // wait for check and connect to newwork
+  console.log("Network Connected...");
 
-     const url = "https://bama.ir/car"; // url of site
+  const url = "https://bama.ir/car"; // url of site
 
-     await page.goto(url); // go to url
-     console.log("Page Loaded...");
+  await page.goto(url); // go to url
+  console.log("Page Loaded...");
 
-}
+  // after the load page screenshot the page
+  await page.screenshot({
+    path: "cars.png",
+  });
+};
 
 fetchCrsWithScroll();

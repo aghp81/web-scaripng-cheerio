@@ -81,6 +81,10 @@ const fetchCrsWithScroll = async () => {
   await page.screenshot({
     path: "cars.png",
   });
+
+  // scroll the page - evaluate scrollHeight
+  const first_height = await page.evaluate("document.body.scrollHeight");
+  console.log("scroll Height: ", first_height); // 2747px for this site
 };
 
 fetchCrsWithScroll();

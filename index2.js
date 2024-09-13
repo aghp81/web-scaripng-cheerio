@@ -14,7 +14,7 @@ const fetchCars = async () => {
       },
     });
 
-    const $ = cheerio.load(response.data);
+    const $ = cheerio.load(response.data.replaceAll("<!---->", ""));
 
     // console.log($.html()); // show all of faradars html home page
 

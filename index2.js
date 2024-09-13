@@ -69,6 +69,11 @@ const fetchCrsWithScroll = async () => {
      })
 
      const page = await browser.newPage();
+
+     await page.waitForNetworkIdle(); // wait for check and connect to newwork
+     console.log("Network Connected...");
+
+     
 }
 
 fetchCrsWithScroll();

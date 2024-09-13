@@ -73,7 +73,7 @@ const fetchCrsWithScroll = async () => {
      await page.waitForNetworkIdle(); // wait for check and connect to newwork
      console.log("Network Connected...");
 
-     
+     const url = "https://bama.ir/car"; // url of site
 }
 
 fetchCrsWithScroll();

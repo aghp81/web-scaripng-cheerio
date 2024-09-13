@@ -38,6 +38,7 @@ const cars = []; // empty array for hold title
 
 cars_items.each((index, element) => {
     const title = $(element).find(".text").text(); // find element with text class and show the its text
+    const year = $(element).find(".bama-ad__detail-row > span:first").text().trim(); // find element with bama-ad__detail-row class and show the first span text and trim
     // cars.push({
     //   id: index + 1, 
     //   title: $(element).text().trim()

@@ -3,7 +3,7 @@ const axios = require("axios");
 
 const fetchCategorise = async () => {
   try {
-    const url = "https://faradars.org";
+    const url = "https://www.tabnak.ir/";
 
     const response = await axios.get(url, {
       timeout: 10000, // 10000ms wait for response the data from site
@@ -30,7 +30,7 @@ const fetchCategorise = async () => {
 const parseCategoriseContent = async () => {
   const $ = await fetchCategorise();
 
-  const links = $("main > div h2"); // list h2 in div in main tag
+  const links = $("div.text a"); // list h2 in div in main tag
 
   links.each((index, element) => {
     console.log(index, $(element).html());

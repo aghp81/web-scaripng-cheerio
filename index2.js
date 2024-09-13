@@ -1,7 +1,7 @@
 const cheerio = require("cheerio");
 const axios = require("axios");
 
-const fetchCategorise = async () => {
+const fetchCars = async () => {
   try {
     const url = "https://www.tabnak.ir/";
 
@@ -27,8 +27,8 @@ const fetchCategorise = async () => {
 // fetchCategorise();
 
 // پارس یا پردازش کردن اطلاعات
-const parseCategoriseContent = async () => {
-  const $ = await fetchCategorise();
+const parseCarsContent = async () => {
+  const $ = await fetchCars();
 
   const links = $("div.text a"); // list h2 in div in main tag
 
@@ -46,4 +46,4 @@ const categories = []; // empty array for hold title
 };
 
 
-parseCategoriseContent();
+parseCarsContent();

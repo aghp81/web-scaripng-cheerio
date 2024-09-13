@@ -1,5 +1,7 @@
 const cheerio = require("cheerio");
 const axios = require("axios");
+const ppt = require("puppeteer-core"); // puppeteer-core fore scroll the web page and web scrap all of the page
+
 
 const fetchCars = async () => {
   try {

@@ -43,7 +43,9 @@ cars_items.each((index, element) => {
     //   id: index + 1, 
     //   title: $(element).text().trim()
     // });
-    console.log(index, title);
+    console.log(index);
+    console.log("Title: ", title);
+    console.log("Year: ", year);
     console.log("-------------------");
   });
 //   console.log(cars_items);

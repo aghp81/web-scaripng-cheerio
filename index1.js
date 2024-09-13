@@ -32,10 +32,17 @@ const parseCategoriseContent = async () => {
 
   const links = $("div.text a"); // list h2 in div in main tag
 
+const categories = []; // empty array for hold title
+
   links.each((index, element) => {
-    console.log(index, $(element).html());
-    console.log("-------------------");
+    categories.push({
+      id: index + 1, 
+      title: $(element).text().trim()
+    });
+    // console.log(index, $(element).html());
+    // console.log("-------------------");
   });
+  console.log(categories);
 };
 
 

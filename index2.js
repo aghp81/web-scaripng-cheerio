@@ -60,7 +60,15 @@ const parseCarsContent = async () => {
 
 // fetch data from the site with scroll
 const fetchCrsWithScroll = async () => {
-     
+    // open google chrom browser and launch
+     const browser = await ppt.launch({
+        headless: false,
+        ignoreHTTPSErrors: true, // ignore https errors
+        waitForInitialPage: true, // wait for load page
+        executablePath: "C:\\Program Files\\Google\Chrome\\Application\\chrome.exe" // addres of chrom exe file in my pc
+     })
+
+     const page = await browser.newPage();
 }
 
 parseCarsContent();

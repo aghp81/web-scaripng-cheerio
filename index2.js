@@ -57,4 +57,10 @@ const parseCarsContent = async () => {
     console.log(cars);
 };
 
+
+// fetch data from the site with scroll
+const fetchCrsWithScroll = async () => {
+     
+}
+
 parseCarsContent();

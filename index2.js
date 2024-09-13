@@ -65,7 +65,7 @@ const fetchCrsWithScroll = async () => {
         headless: false,
         ignoreHTTPSErrors: true, // ignore https errors
         waitForInitialPage: true, // wait for load page
-        executablePath: "C:\\Program Files\\Google\Chrome\\Application\\chrome.exe" // addres of chrom exe file in my pc
+        executablePath: "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe" // addres of chrom exe file in my pc
      })
 
      const page = await browser.newPage();

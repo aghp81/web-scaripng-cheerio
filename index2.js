@@ -91,8 +91,14 @@ const fetchCrsWithScroll = async () => {
   let html = "";
 
   //  حلقه بینهایت
-  while (true){
-    await page.evaluate("window.scrollTo(0, document.body.scrollHeight)") // from 0 to end of scroll down page
+  while (true) {
+    await page.evaluate("window.scrollTo(0, document.body.scrollHeight)"); // from 0 to end of scroll down page
+
+    // ایجاد وقفه که فرصت داشته باشه اطلاعات رو بخونه
+    // مکث بعد از اسکرول کردن 3 ثانیه
+    await new Promise((resolve) => setTimeout(resolve, 3000));
+
+    // به دست آورن ارتفاع جدید بعد از اسکرول
   }
 };
 

@@ -108,6 +108,8 @@ const fetchCrsWithScroll = async () => {
       html = await page.content();
       break;
     }
+
+    lastHeight = newHeight; // هر بار آخرین ارتفاع رو برابر ارتفاع جدید قرار بده
   }
 };
 

@@ -31,9 +31,9 @@ const fetchCars = async () => {
 const parseCarsContent = async (html_content) => {
   let $;
 
-  if(html_content){
-    $ = cheerio.load(html_content)
-  }else{
+  if (html_content) {
+    $ = cheerio.load(html_content);
+  } else {
     $ = await fetchCars();
   }
 
@@ -109,8 +109,8 @@ const fetchCrsWithScroll = async () => {
 
     // اگر به آخر صفحه رسیدیم اطلاعات صفحه رو بخونیم و بریک کن از صفحه برو بیرون
     // if (newHeight === lastHeight){
-      // حالا ما نمیخواهیم همه صفحه رو تا آخر بخونیم میخواهیم فقط سه بار  خونده شه سه بار اسکرول شه
-      if (lastHeight > 3 * first_height){  
+    // حالا ما نمیخواهیم همه صفحه رو تا آخر بخونیم میخواهیم فقط سه بار  خونده شه سه بار اسکرول شه
+    if (lastHeight > 3 * first_height) {
       html = await page.content();
       break;
     }
@@ -125,10 +125,10 @@ const fetchCrsWithScroll = async () => {
   return html; // در نهایت برگرداندن html
 };
 
-const run = async () =>{
+const run = async () => {
   const content = await fetchCrsWithScroll();
 
-  await parseCarsContent()
-}
+  await parseCarsContent(content);
+};
 
-
+run();

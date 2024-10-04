@@ -28,8 +28,14 @@ const fetchCars = async () => {
 // fetchCategorise();
 
 // پارس یا پردازش کردن اطلاعات
-const parseCarsContent = async () => {
-  const $ = await fetchCars();
+const parseCarsContent = async (html_content) => {
+  let $;
+
+  if(html_content){
+    $ = cheerio.load(html_content)
+  }else{
+    $ = await fetchCars();
+  }
 
   const cars_items = $(".bama-ad-holder"); // list h2 in div in main tag
 
@@ -119,4 +125,10 @@ const fetchCrsWithScroll = async () => {
   return html; // در نهایت برگرداندن html
 };
 
-fetchCrsWithScroll();
+const run = async () =>{
+  const content = await fetchCrsWithScroll();
+
+  await parseCarsContent()
+}
+
+

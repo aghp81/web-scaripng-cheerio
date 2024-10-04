@@ -111,6 +111,12 @@ const fetchCrsWithScroll = async () => {
 
     lastHeight = newHeight; // هر بار آخرین ارتفاع رو برابر ارتفاع جدید قرار بده
   }
+
+  console.log(" -------- Finished -------- ");
+  await browser.close(); // مرورگر رو بنند.
+  console.log("Browser Closed...");
+
+  return html; // در نهایت برگرداندن html
 };
 
 fetchCrsWithScroll();

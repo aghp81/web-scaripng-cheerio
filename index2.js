@@ -99,6 +99,7 @@ const fetchCrsWithScroll = async () => {
     await new Promise((resolve) => setTimeout(resolve, 3000));
 
     // به دست آورن ارتفاع جدید بعد از اسکرول
+    const newHeight = await page.evaluate("document.body.scrollHeight"); // هر بار که اسکرول میشه فضای اسکرول مجددا اضافه میشه
   }
 };
 

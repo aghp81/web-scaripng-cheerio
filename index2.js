@@ -102,7 +102,9 @@ const fetchCrsWithScroll = async () => {
     const newHeight = await page.evaluate("document.body.scrollHeight"); // هر بار که اسکرول میشه فضای اسکرول مجددا اضافه میشه
 
     // اگر به آخر صفحه رسیدیم اطلاعات صفحه رو بخونیم و بریک کن از صفحه برو بیرون
-    if (newHeight === lastHeight){
+    // if (newHeight === lastHeight){
+      // حالا ما نمیخواهیم همه صفحه رو تا آخر بخونیم میخواهیم فقط سه بار  خونده شه سه بار اسکرول شه
+      if (lastHeight > 3 * first_height){  
       html = await page.content();
       break;
     }

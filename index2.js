@@ -85,6 +85,15 @@ const fetchCrsWithScroll = async () => {
   // scroll the page - evaluate scrollHeight
   const first_height = await page.evaluate("document.body.scrollHeight");
   console.log("scroll Height: ", first_height); // 2747px for this site
+
+  // scroll for 3 times in this page - ofcourse we can scroll all of page in 1 time
+  let lastHeight = 0;
+  let html = "";
+
+  //  حلقه بینهایت
+  while (true){
+    await page.evaluate("window.scrollTo(0, document.body.scrollHeight)") // from 0 to end of scroll down page
+  }
 };
 
 fetchCrsWithScroll();

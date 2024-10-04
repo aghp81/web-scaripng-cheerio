@@ -100,6 +100,12 @@ const fetchCrsWithScroll = async () => {
 
     // به دست آورن ارتفاع جدید بعد از اسکرول
     const newHeight = await page.evaluate("document.body.scrollHeight"); // هر بار که اسکرول میشه فضای اسکرول مجددا اضافه میشه
+
+    // اگر به آخر صفحه رسیدیم اطلاعات صفحه رو بخونیم و بریک کن از صفحه برو بیرون
+    if (newHeight === lastHeight){
+      html = await page.content();
+      break;
+    }
   }
 };
 
